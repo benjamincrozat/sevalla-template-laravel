@@ -6,7 +6,7 @@ NIXPACKS_PHP_FALLBACK_PATH = '/index.php'
 
 [phases.setup]
 # System-level packages required for building and running the app.
-nixPkgs = ['php84', 'git', 'unzip', 'curl', 'xz']
+nixPkgs = ['php84', 'nginx', 'git', 'unzip', 'curl', 'xz']
 
 [phases.install]
 # Install PHP and JS dependencies (production only).
