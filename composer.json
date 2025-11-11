@@ -11,7 +11,26 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-opcache": "*",
+        "ext-openssl": "*",
+        "ext-pcntl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-readline": "*",
+        "ext-simplexml": "*",
+        "ext-sodium": "*",
+        "ext-tokenizer": "*",
+        "ext-xml": "*",
+        "ext-xmlreader": "*",
+        "ext-xmlwriter": "*",
+        "ext-zip": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
