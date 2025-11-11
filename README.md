@@ -19,14 +19,12 @@ This template ships ready for Sevalla using Nixpacks. No Dockerfile is required.
 ## 2. Configure build (Nixpacks)
 
 In your Sevalla app:
-- Go to **Settings → Build** and choose **Nixpacks** as the build environment.
+- This might be done automatically. If not, go to **Settings → Build** and choose **Nixpacks** as the build environment.
 - Keep the build path as `.` (repository root).
 
 Sevalla will detect `nixpacks.toml` and run the correct install/build/start steps automatically.
 
 <img width="473" src="https://github.com/user-attachments/assets/b074529e-3f51-471d-aa89-9a585dda2e5a" />
-
-Note: The screenshot shows the build environment switch. Select "Nixpacks" for this template.
 
 ## 3. Configure environment variables
 
