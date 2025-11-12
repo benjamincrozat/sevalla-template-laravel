@@ -61,13 +61,13 @@ This will run after each deploy.
 php artisan schedule:work
 ```
 
+<img width="540" height="1152" src="https://github.com/user-attachments/assets/78224eac-66d0-4a49-b128-4087a31b37b5" />
+
 - Queue: create another **Background worker** with:
 
 ```bash
 php artisan queue:work
 ```
-
-<img width="540" height="1152" src="https://github.com/user-attachments/assets/78224eac-66d0-4a49-b128-4087a31b37b5" />
 
 ## 6. Deploy 🚀
 
