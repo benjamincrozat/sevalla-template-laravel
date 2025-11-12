@@ -75,6 +75,8 @@ Click **Deploy now** in Sevalla. After the build:
 - Assets are compiled with Vite
 - Laravel caches are warmed
 - The web process starts on the assigned `$PORT`
+- Your database is migrated
+- Your scheduler and queue worker are started
 
 ## Custom PHP settings via `.user.ini`
 
