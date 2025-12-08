@@ -6,7 +6,13 @@ If you prefer to build your application using Nixpacks, this is also possible an
 
 ## Architecture
 
-On Sevalla, every app has a **default web process** that serves HTTP requests. In this example, the app is built from the repository’s `Dockerfile`, and the web process runs **FrankenPHP** (Caddy-based) from the serversideup image, serving `/public` and running PHP.
+On Sevalla, every app has a **default web process** that serves HTTP requests.
+
+If you prefer to build using the Dockerfile:
+- The app is built from the repository’s `Dockerfile` and the web process runs **FrankenPHP** (Caddy-based) from the serversideup image, serving `/public` and running PHP.
+
+If you prefer to build using Nixpacks:
+- The app is built from your repository's code. Nixpacks figures out the best way to build your project.
 
 ## Steps
 
