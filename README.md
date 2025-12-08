@@ -13,9 +13,11 @@
     - [F. Choose the way you want to build your application](#f-choose-the-way-you-want-to-build-your-application)
   - [4. Deploy 🚀](#4-deploy-)
 
-Sevalla works with Docker. This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
+Sevalla works either with Docker or Nixpacks.
 
-If you prefer to build your application using Nixpacks, this is also possible and only requires a few clicks.
+This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
+
+You can also choose Nixpacks in just a few clicks.
 
 ## Architecture
 
