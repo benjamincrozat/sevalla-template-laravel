@@ -17,7 +17,7 @@ Sevalla works either with Docker or Nixpacks.
 
 This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
 
-You can also choose Nixpacks in just a few clicks.
+You can also [choose Nixpacks](#f-choose-the-way-you-want-to-build-your-application) in just a few clicks.
 
 ## Architecture
 
