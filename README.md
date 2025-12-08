@@ -1,6 +1,8 @@
-# Deploying Laravel w/ scheduler + queues (and Horizon) on Sevalla
+# Deploying Laravel w/ scheduler + queues (and Horizon) on Sevalla with Docker or Nixpacks
 
 Sevalla works with Docker. This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
+
+If you prefer to build your application using Nixpacks, this is also possible and only requires a few clicks.
 
 ## Architecture
 
@@ -59,9 +61,9 @@ Set the following in **App → Environment variables**. Fill in any empty values
 1. Go to **App → Processes → Create process → Background worker**.
 2. Set the custom start command to `php artisan queue:work`.
 
-#### F. Switch to Dockerfile-based build
+#### F. Choose the way you want to build your application
 
-Go to **App → Settings → Build** and change **Build environment** to **Dockerfile**.
+Go to **App → Settings → Build** and change **Build environment** to either **Dockerfile** or **Nixpacks**.
 
 <img width="473" src="https://github.com/user-attachments/assets/b074529e-3f51-471d-aa89-9a585dda2e5a" />
 
