@@ -1,4 +1,17 @@
-# Deploying Laravel w/ scheduler + queues (and Horizon) on Sevalla with Docker or Nixpacks
+# Deploying Laravel on Sevalla using Docker or Nixpacks
+
+- [Architecture](#architecture)
+- [Steps](#steps)
+  - [1. Prepare your repository](#1-prepare-your-repository)
+  - [2. Create Sevalla resources](#2-create-sevalla-resources)
+  - [3. Configure the Sevalla app](#3-configure-the-sevalla-app)
+    - [A. Create a process to run DB migrations](#a-create-a-process-to-run-db-migrations)
+    - [B. Allow internal connections between the app and database](#b-allow-internal-connections-between-the-app-and-database)
+    - [C. Set environment variables](#c-set-environment-variables)
+    - [D. Start the scheduler](#d-start-the-scheduler)
+    - [E. Start your default queue worker or Laravel Horizon](#e-start-your-default-queue-worker-or-laravel-horizon)
+    - [F. Choose the way you want to build your application](#f-choose-the-way-you-want-to-build-your-application)
+  - [4. Deploy 🚀](#4-deploy-)
 
 Sevalla works with Docker. This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
 
@@ -62,7 +75,7 @@ Set the following in **App → Environment variables**. Fill in any empty values
 
 <img width="540" height="1152" src="https://github.com/user-attachments/assets/78224eac-66d0-4a49-b128-4087a31b37b5" />
 
-#### E. Start your default queue
+#### E. Start your default queue worker or Laravel Horizon
 
 1. Go to **App → Processes → Create process → Background worker**.
 2. Set the custom start command to `php artisan queue:work`.
