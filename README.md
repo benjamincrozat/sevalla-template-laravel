@@ -1,23 +1,18 @@
 # Deploying Laravel w/ scheduler + queues on Sevalla
 
-Sevalla works with Docker. Therefore, this repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it.
+Sevalla works with Docker. This repository includes a [Dockerfile](/Dockerfile) that packages a Laravel application and runs it using the `serversideup/php:8.5-frankenphp` base image.
 
 If you want to build your container using Nixpacks instead, [check out our instructions](https://github.com/benjamincrozat/sevalla-template-laravel/tree/nixpacks) for it.
 
 ## Architecture
 
-On Sevalla, every app has a **default web process** that serves HTTP requests. In this example, the app is built from the repository’s `Dockerfile`, and the web process runs two services:
-
-- **PHP-FPM**: runs your PHP application.
-- **Nginx**: listens on `localhost:8080` and serves your Laravel app.
-
-All services are managed by **supervisord**. The default start commands are in [entrypoint.sh](/entrypoint.sh).
+On Sevalla, every app has a **default web process** that serves HTTP requests. In this example, the app is built from the repository’s `Dockerfile`, and the web process runs **FrankenPHP** (Caddy-based) from the serversideup image, serving `/public` and running PHP.
 
 ## Steps
 
 ### 1. Prepare your repository
 
-Copy this repository’s `Dockerfile` and `entrypoint.sh` files into the **root** of your Laravel project. Or just clone this repository if you are starting from scratch.
+Copy this repository’s `Dockerfile` into the **root** of your Laravel project. Or just clone this repository if you are starting from scratch.
 
 ### 2. Create Sevalla resources
 
